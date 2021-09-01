@@ -7,12 +7,16 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import pom.pages.IndexPage;
 
 public class TestBase {
 
     public WebDriver driver;
     //private String browser= "firefox";
     private String browser = "chrome";
+
+    public IndexPage indexPage;
+
 
     @Before
     public void setUp() {
@@ -36,5 +40,10 @@ public class TestBase {
     @After
     public void tearDown() {
         driver.quit();
+    }
+
+    public void validarIngresoPagina() {
+        indexPage = new IndexPage(driver);
+        Assert.assertEquals("Test Pages For Automating", indexPage.tituloIndexPage());
     }
 }

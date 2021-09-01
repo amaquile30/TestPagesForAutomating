@@ -7,7 +7,6 @@ import pom.pages.IndexPage;
 
 public class CalculatorTest extends TestBase {
 
-    private IndexPage indexPage;
     private final String PLUS = "plus";
     private final String TIMES = "times";
     private final String MINUS = "minus";
@@ -74,8 +73,5 @@ public class CalculatorTest extends TestBase {
         Thread.sleep(3000);
     }
 
-    public void validarIngresoPagina() {
-        indexPage = new IndexPage(driver);
-        Assert.assertEquals("Test Pages For Automating", indexPage.tituloIndexPage());
-    }
+
 }
