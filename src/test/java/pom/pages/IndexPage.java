@@ -20,6 +20,9 @@ public class IndexPage extends BasePage {
     @FindBy(linkText = "HTML Form Example")
     private WebElement lnkHtmlForm;
 
+    @FindBy(id ="inputvalidation" )
+    private WebElement lnkHtmlFormValidation;
+
     @FindBy(css = "h1")
     private WebElement tituloIndex;
 
@@ -30,6 +33,9 @@ public class IndexPage extends BasePage {
 
     public void clicCalculator() {
         menuCalculate.click();
+    }
+    public void clicHtmlForValidation() {
+        lnkHtmlFormValidation.click();
     }
 
     public String tituloIndexPage() {
