@@ -34,7 +34,7 @@ public class IndexPage extends BasePage {
     public void clicCalculator() {
         menuCalculate.click();
     }
-    public void clicHtmlForValidation() {
+    public void clicHtmlFormValidation() {
         lnkHtmlFormValidation.click();
     }
 

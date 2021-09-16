@@ -37,6 +37,10 @@ public class HtmlFormValidationPages extends BasePage {
         inputCiudad.click();
         selectByValue(inputCiudad,ciudad);
         inputNotas.sendKeys(notas);
+
+    }
+
+    public  void enviarFormularioValidacion (){
         botonEnviar.click();
     }
     public String obtenerErrorApellido (){
