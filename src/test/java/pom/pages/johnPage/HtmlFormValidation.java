@@ -16,7 +16,7 @@ public class HtmlFormValidation extends BasePage {
     private WebElement inputSurname;
     @FindBy(how = How.ID,using = "age")
     private WebElement inputAge;
-    @FindBy(how = How.CSS,using = "#country > option:nth-child(38)")
+    @FindBy(how = How.ID,using = "country")
     private WebElement inputCountry;
     @FindBy(how = How.ID,using = "notes")
     private WebElement inputNotas;
@@ -25,12 +25,11 @@ public class HtmlFormValidation extends BasePage {
     @FindBy(how = How.NAME,using = "surnamevalidation")
     private WebElement errorLabelApellido;
 
-    public void  llenarFormulario(String nombre,String apellido,String edad, String pais, String notas) throws InterruptedException {
+    public void  llenarFormulario(String nombre,String apellido,String edad, String pais, String notas){
         inputFirstName.sendKeys(nombre);
         inputSurname.sendKeys(apellido);
         inputAge.sendKeys(edad);
         inputCountry.click();
-        Thread.sleep(5000);
         selectByValue(inputCountry,pais);
         inputNotas.sendKeys(notas);
         btnEnviar.click();

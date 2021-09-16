@@ -9,7 +9,7 @@ import pom.pages.johnPage.HtmlFormValidation;
 public class FormInputValidationTest extends TestBase {
 
     @Test
-    public void llenarFormulario() throws InterruptedException {
+    public void llenarFormulario(){
         validarIngresoPagina();
         indexPage.clicFormValidation();
         HtmlFormValidation htmlFormValidation = new HtmlFormValidation(driver);
