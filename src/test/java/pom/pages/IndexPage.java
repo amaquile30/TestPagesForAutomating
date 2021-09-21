@@ -23,6 +23,9 @@ public class IndexPage extends BasePage {
     @FindBy(id ="inputvalidation" )
     private WebElement lnkHtmlFormValidation;
 
+    @FindBy(how = How.ID,using = "inputvalidation")
+    private WebElement linkHtmlFormValidation;
+
     @FindBy(css = "h1")
     private WebElement tituloIndex;
 
@@ -40,5 +43,8 @@ public class IndexPage extends BasePage {
 
     public String tituloIndexPage() {
         return tituloIndex.getText();
+    }
+    public void clicFormValidation(){
+        linkHtmlFormValidation.click();
     }
 }
