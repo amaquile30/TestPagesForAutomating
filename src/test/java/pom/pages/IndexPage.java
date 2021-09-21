@@ -13,22 +13,34 @@ public class IndexPage extends BasePage {
 
     @FindBy(how = How.ID, using = "htmlformtest")
     private WebElement menuHtmlForm;
+
     @FindBy(how = How.ID, using = "calculatetest")
     private WebElement menuCalculate;
+
     @FindBy(linkText = "HTML Form Example")
     private WebElement lnkHtmlForm;
-    @FindBy(css = "h1")
-    private WebElement tituloIndex;
+
+    @FindBy(id ="inputvalidation" )
+    private WebElement lnkHtmlFormValidation;
+
     @FindBy(how = How.ID,using = "inputvalidation")
     private WebElement linkHtmlFormValidation;
+
+    @FindBy(css = "h1")
+    private WebElement tituloIndex;
 
 
     public void clicHtmlForm() {
         menuHtmlForm.click();
     }
+
     public void clicCalculator() {
         menuCalculate.click();
     }
+    public void clicHtmlFormValidation() {
+        lnkHtmlFormValidation.click();
+    }
+
     public String tituloIndexPage() {
         return tituloIndex.getText();
     }
