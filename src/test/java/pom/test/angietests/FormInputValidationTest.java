@@ -1,10 +1,11 @@
-package pom.test;
+package pom.test.angietests;
 
 import org.junit.Assert;
 import org.junit.Test;
 import pom.pages.angie.HtmlFormValidationPages;
+import pom.test.TestBase;
 
-public class FormInputValidationTest extends TestBase{
+public class FormInputValidationTest extends TestBase {
 
     @Test
     public void llenarFormularioValidacion () throws InterruptedException {
