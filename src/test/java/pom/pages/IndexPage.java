@@ -26,6 +26,9 @@ public class IndexPage extends BasePage {
     @FindBy(how = How.ID,using = "inputvalidation")
     private WebElement linkHtmlFormValidation;
 
+    @FindBy(id ="buttoncalculator" )
+    private WebElement linkButtonBasedCalculator;
+
     @FindBy(css = "h1")
     private WebElement tituloIndex;
 
@@ -37,6 +40,7 @@ public class IndexPage extends BasePage {
     public void clicCalculator() {
         menuCalculate.click();
     }
+
     public void clicHtmlFormValidation() {
         lnkHtmlFormValidation.click();
     }
@@ -44,7 +48,12 @@ public class IndexPage extends BasePage {
     public String tituloIndexPage() {
         return tituloIndex.getText();
     }
+
     public void clicFormValidation(){
         linkHtmlFormValidation.click();
+    }
+
+    public void clicButtonBasedCalculatorn(){
+        linkButtonBasedCalculator.click();
     }
 }
