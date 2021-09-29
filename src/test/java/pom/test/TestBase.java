@@ -29,6 +29,7 @@ public class TestBase {
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
+                break;
             default:
                 Assert.fail("El navegador no esta como opción");
         }

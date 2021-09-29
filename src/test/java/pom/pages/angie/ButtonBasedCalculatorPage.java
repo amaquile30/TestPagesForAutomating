@@ -2,10 +2,13 @@ package pom.pages.angie;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import pom.pages.BasePage;
 
@@ -39,6 +42,7 @@ public class ButtonBasedCalculatorPage extends BasePage {
     private WebElement btnButton01;
 
     @FindBy(id = "button02")
+    //@FindBy(xpath = "//div[@class='calculator']/div[@class='keypad']/div[@class='num-pad']/button[@id='button02']")
     private WebElement btnButton02;
 
     @FindBy(id = "button03")
@@ -74,7 +78,8 @@ public class ButtonBasedCalculatorPage extends BasePage {
                 btnButton01.click();
                 break;
             case "2":
-                btnButton02.click();
+                //btnButton02.click();
+                clickOculto(btnButton02);
                 break;
             case "3":
                 btnButton03.click();
@@ -83,7 +88,8 @@ public class ButtonBasedCalculatorPage extends BasePage {
                 btnButton04.click();
                 break;
             case "5":
-                btnButton05.click();
+                //btnButton05.click();
+                clickOculto(btnButton05);
                 break;
             case "6":
                 btnButton06.click();
@@ -111,7 +117,8 @@ public class ButtonBasedCalculatorPage extends BasePage {
     public void clicFuncion(String funcion) {
         switch (funcion) {
             case "suma":
-                btnButtonplus.click();
+                //btnButtonplus.click();
+                clickOculto(btnButtonplus);
                 break;
             case "resta":
                 btnButtonminus.click();
@@ -130,12 +137,13 @@ public class ButtonBasedCalculatorPage extends BasePage {
     }
 
     public void clicIgual (){
-        btnButtonequals.click();
+        //btnButtonequals.click();
+        clickOculto(btnButtonequals);
     }
 
     public String obtenerResultado (){
-
-        return inputCalculator.getText();
+        System.out.println("El resultado es: "+ inputCalculator.getAttribute("value"));
+        return inputCalculator.getAttribute("value");
     }
 }
 

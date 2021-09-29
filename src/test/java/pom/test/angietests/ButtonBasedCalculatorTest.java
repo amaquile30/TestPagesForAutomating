@@ -12,17 +12,13 @@ public class ButtonBasedCalculatorTest extends TestBase {
     public void calculatorSumar() throws InterruptedException {
         validarIngresoPagina();
         indexPage.clicButtonBasedCalculatorn();
-        ButtonBasedCalculatorPage buttonBasedCalculatorPage= new ButtonBasedCalculatorPage(driver);
-
+        ButtonBasedCalculatorPage buttonBasedCalculatorPage = new ButtonBasedCalculatorPage(driver);
         buttonBasedCalculatorPage.clicNumero("2");
         buttonBasedCalculatorPage.clicFuncion("suma");
         buttonBasedCalculatorPage.clicNumero("5");
         buttonBasedCalculatorPage.clicIgual();
         Assert.assertEquals("El resultado obtenido no es el esperado", "7", buttonBasedCalculatorPage.obtenerResultado());
         Thread.sleep(3000);
-
-
-
 
     }
 }
