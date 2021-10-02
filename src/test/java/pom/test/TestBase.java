@@ -14,8 +14,8 @@ public class TestBase {
 
     public WebDriver driver;
     //private String browser= "firefox";
-    //private String browser = "chrome";
-    private String browser = "ninguno";
+    private String browser = "chrome";
+    //private String browser = "ninguno";
 
     public IndexPage indexPage;
 
