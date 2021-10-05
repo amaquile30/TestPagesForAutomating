@@ -1,9 +1,9 @@
-package pom.test.angietests;
+package withoutBDD.test.angietests;
 
 import org.junit.Assert;
 import org.junit.Test;
 import pom.pages.angie.HtmlFormValidationPages;
-import pom.test.TestBase;
+import withoutBDD.test.TestBase;
 
 public class FormInputValidationTest extends TestBase {
 

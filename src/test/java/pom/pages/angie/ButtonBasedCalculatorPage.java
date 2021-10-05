@@ -38,11 +38,12 @@ public class ButtonBasedCalculatorPage extends BasePage {
     @FindBy(id = "buttonallclear")
     private WebElement btnButtonallclear;
 
+    String idNumeros = "button0";
+
     @FindBy(id = "button01")
     private WebElement btnButton01;
 
     @FindBy(id = "button02")
-    //@FindBy(xpath = "//div[@class='calculator']/div[@class='keypad']/div[@class='num-pad']/button[@id='button02']")
     private WebElement btnButton02;
 
     @FindBy(id = "button03")
@@ -72,6 +73,10 @@ public class ButtonBasedCalculatorPage extends BasePage {
     @FindBy(id = "buttondot")
     private WebElement btnButtondot;
 
+    public void clicNumeroSegundaForma(String number) {
+        clickOculto(driver.findElement(By.id(idNumeros.concat(number))));
+    }
+
     public void clicNumero(String numero) {
         switch (numero) {
             case "1":
@@ -87,7 +92,7 @@ public class ButtonBasedCalculatorPage extends BasePage {
                 clickOculto(btnButton03);
                 break;
             case "4":
-               // btnButton04.click();
+                // btnButton04.click();
                 clickOculto(btnButton04);
                 break;
             case "5":
@@ -111,7 +116,7 @@ public class ButtonBasedCalculatorPage extends BasePage {
                 clickOculto(btnButton09);
                 break;
             case "0":
-               // btnButton00.click();
+                // btnButton00.click();
                 clickOculto(btnButton00);
                 break;
 
@@ -147,13 +152,13 @@ public class ButtonBasedCalculatorPage extends BasePage {
         }
     }
 
-    public void clicIgual (){
+    public void clicIgual() {
         //btnButtonequals.click();
         clickOculto(btnButtonequals);
     }
 
-    public String obtenerResultado (){
-        System.out.println("El resultado es: "+ inputCalculator.getAttribute("value"));
+    public String obtenerResultado() {
+        System.out.println("El resultado es: " + inputCalculator.getAttribute("value"));
         return inputCalculator.getAttribute("value");
     }
 }
