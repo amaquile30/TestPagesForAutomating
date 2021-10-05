@@ -1,4 +1,4 @@
-package pom.test;
+package withoutBDD.test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;

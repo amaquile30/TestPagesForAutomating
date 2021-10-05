@@ -1,9 +1,9 @@
-package pom.test.angietests;
+package withoutBDD.test.angietests;
 
 import org.junit.Assert;
 import org.junit.Test;
 import pom.pages.angie.ButtonBasedCalculatorPage;
-import pom.test.TestBase;
+import withoutBDD.test.TestBase;
 
 public class ButtonBasedCalculatorTest extends TestBase {
 
@@ -13,9 +13,9 @@ public class ButtonBasedCalculatorTest extends TestBase {
         validarIngresoPagina();
         indexPage.clicButtonBasedCalculatorn();
         ButtonBasedCalculatorPage buttonBasedCalculatorPage = new ButtonBasedCalculatorPage(driver);
-        buttonBasedCalculatorPage.clicNumero("2");
+        buttonBasedCalculatorPage.clicNumeroSegundaForma("2");
         buttonBasedCalculatorPage.clicFuncion("suma");
-        buttonBasedCalculatorPage.clicNumero("5");
+        buttonBasedCalculatorPage.clicNumeroSegundaForma("5");
         buttonBasedCalculatorPage.clicIgual();
         Assert.assertEquals("El resultado obtenido no es el esperado", "7", buttonBasedCalculatorPage.obtenerResultado());
         Thread.sleep(3000);

@@ -1,9 +1,8 @@
-package pom.test;
+package withoutBDD.test;
 
 import org.junit.Assert;
 import org.junit.Test;
 import pom.pages.CalculatorPage;
-import pom.pages.IndexPage;
 
 public class CalculatorTest extends TestBase {
 

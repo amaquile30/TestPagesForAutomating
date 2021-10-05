@@ -1,9 +1,7 @@
-package pom.test;
+package withoutBDD.test;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import pom.pages.BasePage;
 import pom.pages.johnPage.HtmlFormValidation;
 
 public class FormInputValidationTest extends TestBase {
