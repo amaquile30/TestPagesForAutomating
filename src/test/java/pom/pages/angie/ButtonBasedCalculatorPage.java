@@ -38,11 +38,12 @@ public class ButtonBasedCalculatorPage extends BasePage {
     @FindBy(id = "buttonallclear")
     private WebElement btnButtonallclear;
 
+    String idNumeros = "button0";
+
     @FindBy(id = "button01")
     private WebElement btnButton01;
 
     @FindBy(id = "button02")
-    //@FindBy(xpath = "//div[@class='calculator']/div[@class='keypad']/div[@class='num-pad']/button[@id='button02']")
     private WebElement btnButton02;
 
     @FindBy(id = "button03")
@@ -72,39 +73,51 @@ public class ButtonBasedCalculatorPage extends BasePage {
     @FindBy(id = "buttondot")
     private WebElement btnButtondot;
 
+    public void clicNumeroSegundaForma(String number) {
+        clickOculto(driver.findElement(By.id(idNumeros.concat(number))));
+    }
+
     public void clicNumero(String numero) {
         switch (numero) {
             case "1":
-                btnButton01.click();
+                //btnButton01.click();
+                clickOculto(btnButton01);
                 break;
             case "2":
                 //btnButton02.click();
                 clickOculto(btnButton02);
                 break;
             case "3":
-                btnButton03.click();
+                //btnButton03.click();
+                clickOculto(btnButton03);
                 break;
             case "4":
-                btnButton04.click();
+                // btnButton04.click();
+                clickOculto(btnButton04);
                 break;
             case "5":
                 //btnButton05.click();
                 clickOculto(btnButton05);
                 break;
             case "6":
-                btnButton06.click();
+                //btnButton06.click();
+                clickOculto(btnButton06);
                 break;
             case "7":
-                btnButton07.click();
+                //btnButton07.click();
+                clickOculto(btnButton07);
                 break;
             case "8":
-                btnButton08.click();
+                //btnButton08.click();
+                clickOculto(btnButton08);
                 break;
             case "9":
-                btnButton09.click();
+                //btnButton09.click();
+                clickOculto(btnButton09);
                 break;
             case "0":
-                btnButton00.click();
+                // btnButton00.click();
+                clickOculto(btnButton00);
                 break;
 
             default:
@@ -121,13 +134,16 @@ public class ButtonBasedCalculatorPage extends BasePage {
                 clickOculto(btnButtonplus);
                 break;
             case "resta":
-                btnButtonminus.click();
+                //btnButtonminus.click();
+                clickOculto(btnButtonminus);
                 break;
             case "multiplica":
-                btnButtonmultiply.click();
+                //btnButtonmultiply.click();
+                clickOculto(btnButtonmultiply);
                 break;
             case "divide":
-                btnButtondivide.click();
+                //btnButtondivide.click();
+                clickOculto(btnButtondivide);
                 break;
             default:
                 Assert.fail("La funcion no esta como opción");
@@ -136,13 +152,13 @@ public class ButtonBasedCalculatorPage extends BasePage {
         }
     }
 
-    public void clicIgual (){
+    public void clicIgual() {
         //btnButtonequals.click();
         clickOculto(btnButtonequals);
     }
 
-    public String obtenerResultado (){
-        System.out.println("El resultado es: "+ inputCalculator.getAttribute("value"));
+    public String obtenerResultado() {
+        System.out.println("El resultado es: " + inputCalculator.getAttribute("value"));
         return inputCalculator.getAttribute("value");
     }
 }

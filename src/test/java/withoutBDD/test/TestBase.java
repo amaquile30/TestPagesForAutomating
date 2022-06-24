@@ -1,4 +1,4 @@
-package pom.test;
+package withoutBDD.test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
@@ -14,8 +14,8 @@ public class TestBase {
 
     public WebDriver driver;
     //private String browser= "firefox";
-    //private String browser = "chrome";
-    private String browser = "ninguno";
+    private String browser = "chrome";
+    //private String browser = "ninguno";
 
     public IndexPage indexPage;
 
